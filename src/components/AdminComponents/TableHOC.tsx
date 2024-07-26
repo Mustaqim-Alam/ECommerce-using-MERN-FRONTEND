@@ -3,7 +3,6 @@ import {
   AiOutlineSortDescending,
 } from "react-icons/ai";
 
-
 import {
   Column,
   TableOptions,
@@ -16,7 +15,7 @@ function TableHOC<T extends Object>(
   columns: Column<T>[],
   data: T[],
   containerClassname: string,
-  heading: string,
+  heading: string
 ) {
   return function HOC() {
     const options: TableOptions<T> = {
@@ -30,15 +29,15 @@ function TableHOC<T extends Object>(
     const {
       getTableProps,
       getTableBodyProps,
-      page,
-      headerGroups,
       prepareRow,
+      headerGroups,
       nextPage,
       previousPage,
       canNextPage,
       canPreviousPage,
       pageCount,
       state: { pageIndex },
+      page,
     } = useTable(options, useSortBy, usePagination);
 
     return (
