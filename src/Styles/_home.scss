@@ -1,3 +1,6 @@
+$color1: white;
+$color2: rgb(46, 46, 46);
+$color3: rgb(0, 104, 136);
 .home {
   width: 100%;
   display: flex;
@@ -16,7 +19,7 @@
   > h1 {
     @include heading(1px);
     @include flex(row, space-between, center);
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
   .findMore {
     font-size: 1rem;
@@ -30,6 +33,51 @@
     overflow-x: auto;
     &::-webkit-scrollbar {
       display: none;
+    }
+  }
+}
+
+.product-card {
+  width: 14rem;
+  height: 18rem;
+  padding: 1rem;
+  // background-color: red;
+  position: relative;
+  flex: none;
+  @include flex(column, flex-start, center, 4px);
+  img {
+    @include square(calc(16rem - 7rem));
+    object-fit: cover;
+    margin: 1rem;
+  }
+  span {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  div {
+    position: absolute;
+    @include square(100%);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.267);
+    @include flex;
+    top: 0;
+    left: 0;
+    &:hover{
+      opacity: 1;
+    }
+    button {
+      @include square(3rem);
+      @include flex;
+      border-radius: 100%;
+      border: none;
+      background-color: $color3;
+      color: $color1;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.2s ease-in; 
+      &:hover{
+        rotate: 20deg;
+      }
     }
   }
 }
