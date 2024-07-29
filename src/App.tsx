@@ -28,6 +28,8 @@ const Stopwatch = lazy(() => import("./pages/AdminPages/apps/Stopwatch"));
 const Coupon = lazy(() => import("./pages/AdminPages/apps/Coupon"));
 const Toss = lazy(() => import("./pages/AdminPages/apps/Toss"));
 
+const ShippingAddress = lazy(() => import("./pages/Shipping"));
+
 const App = () => {
   return (
     <Router>
@@ -37,6 +39,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/shipping" element={<ShippingAddress />} />
 
           {/* Admin-Route */}
 
