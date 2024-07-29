@@ -38,6 +38,11 @@
   transform: translate (-50, -50);
 }
 
+@mixin baseShadow() {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
+}
+
+
 @mixin square($s: 1rem) {
   height: $s;
   width: $s;
