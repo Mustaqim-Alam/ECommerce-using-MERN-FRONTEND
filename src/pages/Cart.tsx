@@ -42,7 +42,7 @@ const Cart = () => {
         {cartItems.length > 0 ? (
           cartItems.map((index) => (
             <CartItem
-              key={index}
+              key={index.productId}
               photo={index.photo}
               name={index.name}
               productId={index.productId}
