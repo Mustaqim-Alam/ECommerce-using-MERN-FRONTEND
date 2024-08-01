@@ -3,7 +3,7 @@
 @import "cart";
 // @import "shipping";
 @import "login";
-// @import "search";
+@import "search";
 // @import "product-details";
 // @import "footer";
 @import "AdminStyle/dashboard";
@@ -49,6 +49,7 @@ a {
 }
 
 .header {
+  
   padding: 0.75rem;
   @include flex(row, flex-end, center, 1.2rem);
   box-shadow: rgba(0, 0, 0, 0.193) 1px 1px 5px;
