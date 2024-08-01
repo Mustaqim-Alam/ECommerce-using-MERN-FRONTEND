@@ -3,6 +3,14 @@
   font-weight: $weight;
   text-transform: $case;
 }
+@mixin btn($p: 0.5rem 1rem, $bg, $color) {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: $p;
+  background-color: $bg;
+  color: $color;
+}
 
 @mixin flex(
   $dir: row,

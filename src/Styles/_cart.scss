@@ -10,7 +10,7 @@
       display: none;
     }
 
-    > div {
+    .nothing-into-cart {
       h1,
       p {
         @include heading(2px);

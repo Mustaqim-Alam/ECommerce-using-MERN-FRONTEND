@@ -4,13 +4,24 @@ import { GoSignOut } from "react-icons/go";
 import { HiSearch } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
-const user = { _id: "dfds", role: "user" };
+const user = { _id: "", role: "user" };
 const Header = () => {
   const logoutHandler = () => {};
 
   const [isOpen, setisOpen] = useState<boolean>(false);
   return (
     <nav className="header">
+      <h1
+        style={{
+          marginRight: "auto",
+          paddingLeft: "1rem",
+        }}
+      >
+        {" "}
+        <Link to="/" style={{ cursor: "pointer" }}>
+          ShoppingKart.
+        </Link>{" "}
+      </h1>
       <Link onClick={() => setisOpen(false)} to="/">
         Home
       </Link>
@@ -42,7 +53,7 @@ const Header = () => {
           </dialog>
         </>
       ) : (
-        <Link to="/login">{<FaSignInAlt/>}</Link>
+        <Link to="/login">{<FaSignInAlt />} </Link>
       )}
     </nav>
   );

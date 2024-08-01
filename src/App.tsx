@@ -29,6 +29,7 @@ const Coupon = lazy(() => import("./pages/AdminPages/apps/Coupon"));
 const Toss = lazy(() => import("./pages/AdminPages/apps/Toss"));
 
 const ShippingAddress = lazy(() => import("./pages/Shipping"));
+const Login = lazy(() => import("./pages/Login"));
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/search" element={<Search />} />
           <Route path="/shipping" element={<ShippingAddress />} />
+          <Route path="/login" element={<Login />} />
 
           {/* Admin-Route */}
 
