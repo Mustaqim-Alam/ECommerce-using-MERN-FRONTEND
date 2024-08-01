@@ -4,15 +4,15 @@ import CartItem from "../components/CartItem";
 import { Link } from "react-router-dom";
 
 const cartItems = [
-  {
-    photo:
-      "https://images.unsplash.com/photo-1622428051717-dcd8412959de?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    name: "Bottle",
-    quantity: 800,
-    productId: "hvbhsadba",
-    price: 225,
-    stock: 33,
-  },
+  // {
+  //   photo:
+  //     "https://images.unsplash.com/photo-1622428051717-dcd8412959de?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   name: "Bottle",
+  //   quantity: 800,
+  //   productId: "hvbhsadba",
+  //   price: 225,
+  //   stock: 33,
+  // },
 ];
 const subtotal = 4000;
 const tax = Math.round(subtotal * 0.18);
@@ -51,7 +51,11 @@ const Cart = () => {
             />
           ))
         ) : (
-          <h1>Let's add something in cart</h1>
+          <div>
+          <h1>Let's add something in cart . . . .</h1>
+          <p>Nothing is added to the cart!</p>
+          </div>
+        
         )}
       </main>
       <aside>

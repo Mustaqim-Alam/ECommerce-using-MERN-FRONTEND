@@ -8,7 +8,7 @@ $color3: rgb(0, 104, 136);
   padding: 2rem 5%;
   height: calc(100vh - 4rem);
   > section {
-    background-image: url("https://ecommerceresult.com/wp-content/uploads/2019/12/Ecommerce-trends-van-2020.jpeg");
+    background-image: url("https://images.ctfassets.net/wowgx05xsdrr/FuyuOgIBjnHyehF0IR8zY/8109414c34065431d14886a5aad2f60a/Article-Header_Ecommerce_Website.jpg?fm=webp&w=3840&q=75");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -62,7 +62,7 @@ $color3: rgb(0, 104, 136);
     @include flex;
     top: 0;
     left: 0;
-    &:hover{
+    &:hover {
       opacity: 1;
     }
     button {
@@ -74,8 +74,8 @@ $color3: rgb(0, 104, 136);
       color: $color1;
       cursor: pointer;
       font-size: 1.1rem;
-      transition: all 0.2s ease-in; 
-      &:hover{
+      transition: all 0.2s ease-in;
+      &:hover {
         rotate: 20deg;
       }
     }
