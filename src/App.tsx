@@ -30,6 +30,7 @@ const Toss = lazy(() => import("./pages/AdminPages/apps/Toss"));
 
 const ShippingAddress = lazy(() => import("./pages/Shipping"));
 const Login = lazy(() => import("./pages/Login"));
+const OrderList = lazy(() => import("./pages/OrdersList"));
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/shipping" element={<ShippingAddress />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/orders" element={<OrderList />} />
 
           {/* Admin-Route */}
 
