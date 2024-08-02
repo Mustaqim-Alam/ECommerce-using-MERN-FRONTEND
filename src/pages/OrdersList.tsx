@@ -1,6 +1,7 @@
 import { Column } from "react-table";
 import TableHOC from "../components/AdminComponents/TableHOC";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
+import { Link } from "react-router-dom";
 
 type DataType = {
   _id: string;
@@ -29,19 +30,29 @@ const column: Column<DataType>[] = [
     accessor: "discount",
   },
   {
-    Header: "status",
-    accessor: "discount",
+    Header: "Status",
+    accessor: "status",
   },
   {
-    Header: "action",
-    accessor: "discount",
+    Header: "Action",
+    accessor: "action",
   },
 ];
-
+const id = "bhvfds";
 const OrdersList = () => {
+  const [rows] = useState<DataType[]>([
+    {
+      _id: "hdsfbvhds",
+      amount: 54541,
+      quantity: 45,
+      discount: 56,
+      status: <span>Processing</span>,
+      action: <Link to={`/order/${id}`}>view</Link>,
+    },
+  ]);
   const table = TableHOC<DataType>(
     column,
-    [],
+    rows,
     "dashboard-product-box",
     "Orders"
   )();
