@@ -13,6 +13,7 @@
     "chart.js": "^4.4.3",
     "chartjs": "^0.3.24",
     "firebase": "^10.12.4",
+    "natural-orderby": "^3.0.2",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
@@ -21,7 +22,8 @@
     "react-router-dom": "^6.25.1",
     "react-spinners": "^0.14.1",
     "react-table": "^7.8.0",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -33,7 +35,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
-    "typescript": "^5.2.2",
+    "typescript": "^5.5.4",
     "vite": "^5.3.4"
   }
 }
