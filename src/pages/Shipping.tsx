@@ -10,7 +10,9 @@ const Shipping = () => {
     country: "",
   });
 
-  const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+  const changeHandler = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setShippingInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -54,9 +56,9 @@ const Shipping = () => {
         />
         <select
           value={shippingInfo.country}
-          onChange={changeHandler}
           name="country"
           required
+          onChange={changeHandler}
         >
           <option value="" selected disabled>
             Select Country

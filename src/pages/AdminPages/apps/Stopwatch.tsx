@@ -15,10 +15,10 @@ const formatTime = (timeInSecond: number) => {
 
 const Stopwatch = () => {
   const [time, setTime] = useState<number>(0);
-  const [isRunning, setIsRunning] = useState<Boolean>(false);
+  const [isRunning, setIsRunning] = useState<boolean>(false);
 
   useEffect(() => {
-    let intervalID: number;
+    let intervalID: NodeJS.Timeout;
     if (isRunning) {
       intervalID = setInterval(() => {
         setTime((prev) => prev + 1);
