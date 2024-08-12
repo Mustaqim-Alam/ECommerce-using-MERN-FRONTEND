@@ -32,13 +32,13 @@ function TableHOC<T extends Object>(
       headerGroups,
       prepareRow,
       rows,
-      // nextPage,
-      // previousPage,
-      // canNextPage,
-      // canPreviousPage,
-      // pageCount,
-      // state: { pageIndex },
-      // page,
+      nextPage,
+      previousPage,
+      canNextPage,
+      canPreviousPage,
+      pageCount,
+      state: { pageIndex },
+      page,
     } = useTable(options, useSortBy, usePagination);
 
     return (
