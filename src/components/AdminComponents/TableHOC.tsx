@@ -11,7 +11,7 @@ import {
   useTable,
 } from "react-table";
 
-function TableHOC<T extends Object>(
+function TableHOC<T extends object>(
   columns: Column<T>[],
   data: T[],
   containerClassname: string,
@@ -31,7 +31,6 @@ function TableHOC<T extends Object>(
       getTableBodyProps,
       headerGroups,
       prepareRow,
-      rows,
       nextPage,
       previousPage,
       canNextPage,
@@ -43,12 +42,12 @@ function TableHOC<T extends Object>(
 
     return (
       <div className={containerClassname}>
-        <h2 className="heading">{heading}</h2>
+        n<h2 className="heading">{heading}</h2>
         <table className="table" {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroups) => (
               <tr {...headerGroups.getHeaderGroupProps()}>
-                {headerGroups.headers.map((column: any) => (
+                {headerGroups.headers.map((column) => (
                   <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                     {column.render("Header")}
                     {column.isSorted && (
@@ -67,7 +66,7 @@ function TableHOC<T extends Object>(
             ))}
           </thead>
           <tbody {...getTableBodyProps}>
-            {rows.map((row) => {
+            {page.map((row) => {
               prepareRow(row);
               return (
                 <tr {...row.getRowProps()}>
