@@ -46,7 +46,6 @@ const App = () => {
           <Route path="/orders" element={<OrderList />} />
 
           {/* Admin-Route */}
-
           <Route>
             <Route
               path="/"
